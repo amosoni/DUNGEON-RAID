@@ -17,6 +17,14 @@
     <meta property="og:site_name" content="Dungeon Raid">
     <meta property="og:locale" content="en_US">
     <meta name="author" content="DungeonRaid.online">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HYBVKVLV1E"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HYBVKVLV1E');
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -417,14 +425,14 @@
         }
         
         @media (max-width: 768px) {
-            .hero-bg::before {
-                animation: none;
-            }
+            .hero-bg::before { animation: none; }
             .glitch-text::before,
-            .glitch-text::after {
-                display: none;
-            }
+            .glitch-text::after { display: none; }
         }
+        @media (prefers-reduced-motion: reduce) {
+            * { animation: none !important; transition: none !important; }
+        }
+        .defer-section { content-visibility: auto; contain-intrinsic-size: 600px 800px; }
     </style>
 </head>
 <body class="text-white overflow-x-hidden">
@@ -433,7 +441,7 @@
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                                  <div class="flex items-center gap-3">
-                    <img src="/assets/logo.svg" alt="Dungeon Raid" class="w-8 h-8"/>
+                    <img src="/assets/logo.svg" alt="Dungeon Raid" class="w-8 h-8" width="32" height="32" loading="eager" decoding="async" fetchpriority="high"/>
                     <div class="font-gaming text-3xl md:text-4xl font-bold"><span class="glitch-text" data-text="DUNGEON RAID">DUNGEON RAID</span></div>
                  </div>
                 <div class="hidden md:flex space-x-8">
@@ -482,6 +490,7 @@
                             style='width:100%;height:100%;border-radius:18px;' 
                             frameborder='0' 
                             allowfullscreen
+                            loading="eager" fetchpriority="high"
                             title="Dungeon Raid Online Game">
                     </iframe>
                 </div>
@@ -505,7 +514,7 @@
                         </a>
                     </div>
                 <div class="text-center">
-                    <h2 class="text-2xl md:text-3xl font-gaming font-bold neon-text">⚔️ BATTLE ARENA ⚔️</h2>
+                    <h2 class="text-2xl md:text-3xl font-gaming font-bold"><span class="glitch-text" data-text="⚔️ BATTLE ARENA ⚔️">⚔️ BATTLE ARENA ⚔️</span></h2>
                     <p class="text-gray-400 font-medium">Start your legendary quest now!</p>
                 </div>
 
@@ -558,10 +567,7 @@
         <div class="absolute inset-0 bg-black bg-opacity-40"></div>
         <div class="container mx-auto px-6 relative z-10">
             <div class="max-w-5xl mx-auto">
-                <h2 class="text-5xl md:text-6xl font-gaming font-bold mb-12 text-center">
-                    <span class="text-white">THE </span>
-                    <span class="neon-text">LEGEND</span>
-                </h2>
+                <h2 class="text-5xl md:text-6xl font-gaming font-bold mb-12 text-center"><span class="glitch-text" data-text="THE LEGEND">THE LEGEND</span></h2>
                 
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div class="space-y-6">
@@ -584,6 +590,8 @@
                                 <span class="font-gaming text-neon-pink">🎯 STRATEGIC DEPTH</span>
                             </div>
                         </div>
+                        
+                        <!-- Removed inline media: restore original spacing -->
                     </div>
                     
                     <div class="relative">
@@ -608,6 +616,11 @@
                                 </div>
                             </div>
                         </div>
+                        
+                        <!-- Inline media tile under core systems card -->
+                        <figure class="cyber-card p-2 rounded-2xl overflow-hidden mt-6">
+                            <img src="/Dungeon Raid2.jpg" alt="Core systems preview" loading="lazy" decoding="async" class="w-full h-auto rounded-xl"/>
+                        </figure>
                     </div>
                 </div>
             </div>
@@ -624,6 +637,12 @@
                     <div class="feature-icon">🎯</div>
                     <h3 class="text-2xl font-gaming font-bold mb-4 text-white group-hover:text-neon-blue transition-colors">TACTICAL MATRIX</h3>
                     <p class="text-gray-300 leading-relaxed">Command the battlefield through precise tile manipulation. Each move ripples through combat algorithms, creating devastating chain reactions.</p>
+                </div>
+                
+                <div class="cyber-card p-8 rounded-3xl group">
+                    <div class="feature-icon">💎</div>
+                    <h3 class="text-2xl font-gaming font-bold mb-4 text-white group-hover:text-neon-purple transition-colors">LOOT ALGORITHMS</h3>
+                    <p class="text-gray-300 leading-relaxed">Uncover rare treasures through advanced probability engines. Dynamic loot tables ensure every expedition yields unique rewards.</p>
                 </div>
                 
                 <div class="cyber-card p-8 rounded-3xl group">
@@ -648,12 +667,6 @@
                     <div class="feature-icon">🔮</div>
                     <h3 class="text-2xl font-gaming font-bold mb-4 text-white group-hover:text-neon-blue transition-colors">ARCANE SYSTEMS</h3>
                     <p class="text-gray-300 leading-relaxed">Harness elemental forces and digital magic. Combine spell matrices for reality-bending effects that reshape the dungeon landscape.</p>
-                </div>
-                
-                <div class="cyber-card p-8 rounded-3xl group">
-                    <div class="feature-icon">💎</div>
-                    <h3 class="text-2xl font-gaming font-bold mb-4 text-white group-hover:text-neon-purple transition-colors">LOOT ALGORITHMS</h3>
-                    <p class="text-gray-300 leading-relaxed">Uncover rare treasures through advanced probability engines. Dynamic loot tables ensure every expedition yields unique rewards.</p>
                 </div>
             </div>
         </div>
@@ -689,36 +702,18 @@
                         </div>
                     </div>
 
-                    <div class="cyber-card p-10 rounded-3xl">
-                        <h3 class="text-3xl font-gaming font-bold mb-6 text-neon-purple">⚔️ TACTICAL ALGORITHMS</h3>
-                        <p class="text-xl text-gray-300 mb-6 leading-relaxed">
-                            Combat transcends simple tile matching. You're orchestrating a digital symphony of destruction, 
-                            where timing, positioning, and resource management determine survival.
-                        </p>
-                        <div class="grid md:grid-cols-3 gap-6">
-                            <div class="text-center">
-                                <div class="text-4xl mb-4">🧠</div>
-                                <h4 class="font-bold text-neon-blue mb-2">TACTICAL THINKING</h4>
-                                <p class="text-gray-400 text-sm">Analyze enemy patterns and exploit weaknesses</p>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-4xl mb-4">⚡</div>
-                                <h4 class="font-bold text-neon-purple mb-2">REACTION SPEED</h4>
-                                <p class="text-gray-400 text-sm">Execute rapid tactical adjustments</p>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-4xl mb-4">🎯</div>
-                                <h4 class="font-bold text-neon-pink mb-2">PRECISION STRIKES</h4>
-                                <p class="text-gray-400 text-sm">Maximize efficiency with targeted combos</p>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Auto-play on view: guide section video -->
+                    <figure class="cyber-card p-2 rounded-3xl overflow-hidden">
+                        <video class="w-full rounded-xl autoplay-when-visible" preload="metadata" playsinline muted poster="/Dungeon Raid2.jpg">
+                            <source src="/Dungeon Raid2.webm" type="video/webm" />
+                        </video>
+                    </figure>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="resources" class="py-12 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+    <section id="resources" class="py-12 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden defer-section">
         <div class="absolute inset-0 bg-black bg-opacity-30"></div>
         <div class="container mx-auto px-6 relative z-10">
             <div class="max-w-5xl mx-auto">
@@ -907,15 +902,24 @@
         });
 
         // Parallax scroll effects for floating orbs
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const orbs = document.querySelectorAll('.floating-orb');
-            
-            orbs.forEach((orb, index) => {
-                const speed = 0.5 + (index * 0.1);
-                orb.style.transform = `translateY(${scrolled * speed}px)`;
+        // Parallax scroll effects with rAF throttling and reduced-motion respect
+        const orbs = document.querySelectorAll('.floating-orb');
+        let ticking = false;
+        function onScroll() {
+            if (ticking) return;
+            ticking = true;
+            requestAnimationFrame(() => {
+                const scrolled = window.pageYOffset;
+                orbs.forEach((orb, index) => {
+                    const speed = 0.5 + (index * 0.1);
+                    orb.style.transform = `translateY(${scrolled * speed}px)`;
+                });
+                ticking = false;
             });
-        });
+        }
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            window.addEventListener('scroll', onScroll, { passive: true });
+        }
 
         // Enhanced button interactions
         document.querySelectorAll('.hologram-btn').forEach(btn => {
@@ -927,6 +931,22 @@
                 this.style.transform = 'translateY(0) scale(1)';
             });
         });
+
+        // Auto play/pause videos when section becomes visible
+        const autoVideos = document.querySelectorAll('video.autoplay-when-visible');
+        if (autoVideos.length) {
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    const v = e.target;
+                    if (e.isIntersecting) {
+                        v.play().catch(()=>{});
+                    } else {
+                        v.pause();
+                    }
+                });
+            }, { threshold: 0.5 });
+            autoVideos.forEach(v => io.observe(v));
+        }
 
         // Dynamic glow intensity based on time
         setInterval(() => {
