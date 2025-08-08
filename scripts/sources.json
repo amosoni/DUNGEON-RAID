@@ -1,0 +1,26 @@
+{
+  "items": [
+    {
+      "name": "Example Items Page",
+      "url": "https://example.com/dungeon-raid/items",
+      "type": "html-list",
+      "selector": {
+        "row": ".item-row",
+        "name": ".item-name",
+        "desc": ".item-desc"
+      }
+    }
+  ],
+  "enemies": [
+    {
+      "name": "Example Enemies Page",
+      "url": "https://example.com/dungeon-raid/enemies",
+      "type": "html-list",
+      "selector": {
+        "row": ".enemy-row",
+        "name": ".enemy-name",
+        "desc": ".enemy-desc"
+      }
+    }
+  ]
+} 

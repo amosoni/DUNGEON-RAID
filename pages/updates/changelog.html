@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dungeon Raid Changelog | Updates & Fixes</title>
+  <meta name="description" content="Track updates, improvements and bug fixes for Dungeon Raid online." />
+  <link rel="canonical" href="https://dungeonraid.online/pages/updates/changelog.html" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Dungeon Raid Changelog" />
+  <meta property="og:description" content="Latest updates and fixes for Dungeon Raid." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://dungeonraid.online/pages/updates/changelog.html" />
+  <meta property="og:image" content="https://dungeonraid.online/og-image.jpg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+    *{font-family:'Rajdhani',-apple-system,BlinkMacSystemFont,sans-serif}
+    .font-gaming{font-family:'Orbitron',monospace}
+    .glitch-text{position:relative;color:#fff;font-weight:900}
+    .glitch-text::before,.glitch-text::after{content:attr(data-text);position:absolute;top:0;left:0;width:100%;height:100%}
+    .glitch-text::before{animation:gl1 .5s infinite;color:#F72C85;z-index:-1}
+    .glitch-text::after{animation:gl2 .5s infinite;color:#00D4FF;z-index:-2}
+    @keyframes gl1{0%,14%,15%,49%,50%,99%,100%{transform:translate(0)}15%,49%{transform:translate(-2px,2px)}}
+    @keyframes gl2{0%,20%,21%,62%,63%,99%,100%{transform:translate(0)}21%,62%{transform:translate(2px,-2px)}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CreativeWorkSeries",
+    "name":"Dungeon Raid Changelog",
+    "url":"https://dungeonraid.online/pages/updates/changelog.html",
+    "about":"Version updates and fixes"
+  }
+  </script>
+</head>
+<body class="text-white bg-slate-950">
+  <nav class="w-full border-b border-cyan-500/30 sticky top-0 backdrop-blur bg-slate-950/80 z-50">
+    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+      <a href="/" class="font-gaming text-xl"><span class="glitch-text" data-text="DUNGEON RAID">DUNGEON RAID</span></a>
+      <div class="text-sm text-cyan-300"><a href="/">Play</a></div>
+    </div>
+  </nav>
+
+  <header class="py-16 text-center bg-gradient-to-br from-slate-900 via-cyan-900 to-purple-900">
+    <h1 class="font-gaming text-4xl md:text-5xl font-black"><span class="glitch-text" data-text="Changelog">Changelog</span></h1>
+    <p class="text-gray-300 mt-4 max-w-3xl mx-auto">Latest improvements, content additions and bug fixes.</p>
+  </header>
+
+  <main class="container mx-auto px-6 py-10 max-w-4xl">
+    <nav class="text-sm text-gray-400 mb-6">Home / Updates / Changelog</nav>
+
+    <article class="space-y-6">
+      <section>
+        <h2 class="font-gaming text-xl text-cyan-300">2024-08-01</h2>
+        <ul class="list-disc pl-6 text-gray-300">
+          <li>Hero section improved for full-screen game view.</li>
+          <li>Added inner pages and structured data for SEO.</li>
+        </ul>
+      </section>
+      <section>
+        <h2 class="font-gaming text-xl text-cyan-300">2024-07-20</h2>
+        <ul class="list-disc pl-6 text-gray-300">
+          <li>Visual polish to neon effects and buttons.</li>
+          <li>Performance tweaks for smoother scrolling.</li>
+        </ul>
+      </section>
+    </article>
+
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="/pages/support/chromebook.html" class="hologram-btn px-6 py-2 rounded-full border border-cyan-400 text-cyan-300">Chromebook Support →</a>
+      <a href="/" class="hologram-btn px-6 py-2 rounded-full border border-cyan-400 text-cyan-300">Back to Play</a>
+    </div>
+  </main>
+
+  <footer class="py-10 text-center text-gray-500 border-top border-cyan-500/20">© 2024 DungeonRaid.online</footer>
+</body>
+</html> 
