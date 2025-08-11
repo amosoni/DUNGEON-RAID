@@ -2,57 +2,80 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dungeonraid.online/</loc>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://dungeonraid.online/pages/guide/beginners.html</loc>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dungeonraid.online/pages/tactics/combos.html</loc>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://dungeonraid.online/pages/support/chromebook.html</loc>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://dungeonraid.online/pages/updates/changelog.html</loc>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://dungeonraid.online/pages/items/</loc>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://dungeonraid.online/pages/items/sword-of-ember.html</loc>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://dungeonraid.online/pages/items/arcane-talisman.html</loc>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://dungeonraid.online/pages/enemies/</loc>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://dungeonraid.online/pages/enemies/goblin-king.html</loc>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://dungeonraid.online/pages/legal/privacy.html</loc>
+    <lastmod>2025-08-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-</urlset> 
+  <url>
+    <loc>https://dungeonraid.online/pages/items-auto/index.html</loc>
+    <lastmod>2025-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://dungeonraid.online/pages/enemies-auto/index.html</loc>
+    <lastmod>2025-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+</urlset>

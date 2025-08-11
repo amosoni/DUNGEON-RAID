@@ -4,9 +4,16 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "cleanup": "node scripts/cleanup.mjs",
+    "update-paths": "node scripts/update-paths.mjs",
+    "check": "node scripts/check-status.mjs",
+    "optimize": "node scripts/optimize-performance.mjs",
+    "sitemap": "node scripts/generate-sitemap.mjs",
+    "validate": "node scripts/validate-project.mjs",
     "scrape": "node scripts/scrape.mjs",
     "generate": "node scripts/generate.mjs",
-    "build": "npm run scrape && npm run generate"
+    "build": "npm run cleanup && npm run update-paths && npm run optimize && npm run scrape && npm run generate && npm run sitemap",
+    "postinstall": "npm run cleanup"
   },
   "dependencies": {
     "axios": "^1.6.8",

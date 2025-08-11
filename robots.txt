@@ -1,4 +1,17 @@
 User-agent: *
 Allow: /
+Allow: /pages/
+Allow: /assets/
+Allow: /scripts/
 
-Sitemap: https://dungeonraid.online/sitemap.xml 
+# Disallow any admin or private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+Disallow: /.vscode/
+
+# Sitemap location
+Sitemap: https://dungeonraid.online/sitemap.xml
+
+# Crawl delay (optional, for polite crawling)
+Crawl-delay: 1 
