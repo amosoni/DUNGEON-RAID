@@ -1,0 +1,52 @@
+# URL规范化 - 强制使用.html后缀
+RewriteEngine On
+
+# 如果URL没有.html后缀且不是目录，则重定向到带.html的版本
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !\.html$
+RewriteCond %{REQUEST_URI} !^/$
+RewriteCond %{REQUEST_URI} !^/assets/
+RewriteCond %{REQUEST_URI} !^/scripts/
+RewriteRule ^([^.]*[^/])$ /$1.html [R=301,L]
+
+# 图片缓存优化
+<FilesMatch "\.(jpg|jpeg|png|gif|webp|svg|webm|mp4)$">
+    ExpiresActive On
+    ExpiresDefault "access plus 1 year"
+    Header set Cache-Control "public, immutable"
+</FilesMatch>
+
+# 静态资源缓存
+<FilesMatch "\.(css|js|woff|woff2|ttf|eot)$">
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+    Header set Cache-Control "public, immutable"
+</FilesMatch>
+
+# 防止图片热链接
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^https?://(www\.)?dungeonraid\.online [NC]
+RewriteCond %{HTTP_REFERER} !^https?://(www\.)?google\.com [NC]
+RewriteCond %{HTTP_REFERER} !^https?://(www\.)?bing\.com [NC]
+RewriteCond %{HTTP_REFERER} !^https?://(www\.)?yahoo\.com [NC]
+RewriteRule \.(jpg|jpeg|png|gif|webp|svg)$ - [F]
+
+# 压缩文本文件
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>
+
+# 安全头
+Header always set X-Content-Type-Options nosniff
+Header always set X-Frame-Options DENY
+Header always set X-XSS-Protection "1; mode=block"
+Header always set Referrer-Policy "strict-origin-when-cross-origin" 
